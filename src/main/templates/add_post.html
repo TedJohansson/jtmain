@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+    {% load staticfiles %}
     <form action="" method="post">
         {% csrf_token %}
         {{ form.media }}
