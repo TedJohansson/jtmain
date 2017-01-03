@@ -1,6 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import View
 
 
-def index(request):
-    return HttpResponse("Excuse the mess we a are rebuilding.")
+class UserHomeView(View):
+    """
+    The home page for a user.
+    """
+    def get(self, request, *args, **kwargs):
+        """
+        Build up the user home page.
+
+        :param request: HTTP request holding the user.
+        :return: render: the home page template.
+        """
+        context = {}
+
+        return render(request, 'home.html', context)

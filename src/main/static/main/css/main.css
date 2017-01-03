@@ -1,0 +1,14 @@
+.header{
+    width: 100%;
+}
+.container {
+    margin: auto;
+    width: 80%;
+    margin-top: -20px;
+    padding: 0px;
+    background-color: #ffffff;
+	min-height: 100vh;
+}
+body {
+    background-color: #dbdbdb;
+}
