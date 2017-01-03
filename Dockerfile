@@ -4,5 +4,6 @@
  RUN mkdir /config
  ADD /config/requirements.py /config/
  RUN pip install -r /config/requirements.py
- RUN mkdir /src;
- WORKDIR /src
+ COPY /src /code
+ WORKDIR /code
+ RUN python manage.py collectstatic --noinput

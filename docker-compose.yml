@@ -7,8 +7,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./src:/src
+      - ./code:/code
       - ./config/nginx:/etc/nginx/conf.d
+    volumes_from:
+      - web
     depends_on:
       - web
     links:
@@ -21,7 +23,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./src:/src
+      - /code/static/
 
   db:
     image: postgres:latest
