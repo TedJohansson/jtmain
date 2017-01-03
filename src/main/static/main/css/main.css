@@ -3,11 +3,19 @@
 }
 .container {
     margin: auto;
-    width: 80%;
+    width: 70%;
     margin-top: -20px;
     padding: 0px;
     background-color: #ffffff;
 	min-height: 100vh;
+}
+.post{
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    margin: auto;
+    padding-bottom: 10px;
+    width: 95%;
 }
 body {
     background-color: #dbdbdb;
