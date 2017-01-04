@@ -6,11 +6,10 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    volumes:
-      - ./code:/code
-      - ./config/nginx:/etc/nginx/conf.d
     volumes_from:
       - web
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - web
     links:
@@ -23,7 +22,7 @@ services:
     depends_on:
       - db
     volumes:
-      - /code/static/
+      - /code/static
 
   db:
     image: postgres:latest
