@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     {% load staticfiles %}
-     <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+    <script src="{% static 'main/js/scroll.js' %}"></script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <div class="container">
-        <img class="header" src="{% static "main/img/Johanssontech-header.png" %}" alt="My image"/>
-        {% for post in posts %}
-        <div class="post">
-            <h3> {{ post.title }} </h3>
-            <p> {{ post.body | safe }} </p>
-            <p class="author">{{ post.author.last_name }}, {{ post.author.first_name }} </p><p class="upload_date"></p>
+    <div id="body">
+        <div id="header">
+            <img id="header-img" src="{% static "main/img/Johanssontech-header.png" %}" alt="My image"/>
         </div>
-        {% endfor %}
+        <div class="container">
+            {% for post in posts %}
+            <div class="post">
+                <h3> {{ post.title }} </h3>
+                <p> {{ post.body | safe }} </p>
+                <p class="author">{{ post.author.last_name }}, {{ post.author.first_name }} </p><p class="upload_date"></p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>

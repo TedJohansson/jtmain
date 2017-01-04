@@ -1,11 +1,18 @@
-.header{
+#header{
     width: 100%;
+    padding-left: calc(25% - 3px);
+    position: relative;
+    top: 0px;
+}
+#header-img{
+    margin-bottom: -10px;
+    padding: 0px;
+    width: calc(50% + 6px);
 }
 .container {
+    width: 50%;
     margin: auto;
-    width: 70%;
-    margin-top: -20px;
-    padding: 0px;
+    padding: 2px;
     background-color: #ffffff;
 	min-height: 100vh;
 }

@@ -7,6 +7,7 @@ from django.views.generic import View, ListView, UpdateView
 from .forms import PostForm, LoginForm
 from .models import Post, User
 
+
 def login_to_app(request):
     """
     Login is required to access the main pages.
@@ -89,6 +90,7 @@ class AddPostView(LoginRequiredMixin, View):
             return redirect('main:user_home', )
 
         return render(request, 'add_post.html', {'form': form})
+
 
 class UserUpdate(LoginRequiredMixin, UpdateView):
     """
